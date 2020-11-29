@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+
+  {% include "base/css.html" %}
+  {% block css %}
+  {% endblock css %}
+
+  -->
+  
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Chile Autos, Cotiza Tu Nuevo Vehiculo</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://resource.csnstatic.com/retail/globals/logo/v5/chileautos-white.svg" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  
+  
+  <link rel="stylesheet" href="../../media/css/estilo.css">
+  <link href="../../media/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="../../media/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+
+
+  <!--   NAV BAR -->
+  <header>
+    {% include "base/header.html" %}
+    {% block header %}
+    {% endblock header %}
+</header>
+
+{% include "base/banner.html" %}
+{% block banner %}
+{% endblock banner %}
+  <!-- fin div de navbar-->
+
+
+
+
+  <!-- Fin NAV BAR-->
+
+  <br>
+  <br>
+  <br>
+
+  <article>
+    <section class="container">
+
+      <div class="row ">
+        <a class="left" style="color: black; font-size: 30px;">Catálogo 0Km</a>
+        <a class="right " href="#!" style="color: blue; font-size: 20px;">Ver Todos Los Tipos ></a>
+      </div>
+
+      <div class="row center">
+        <div class="col ">
+          <img src="../../media/img/miniaturas/Sedán.png" alt=""><br>
+          <span class="center" href="#">Sedán</span>
+        </div>
+        <div class="col  ">
+          <img src="../../media/img/miniaturas/SUV.png" alt=""><br>
+          <span class="center-align" href="#">SUV</span>
+        </div>
+        <div class="col  ">
+          <img src="../../media/img/miniaturas/Convertible.png" alt=""><br>
+          <span class="center-align" href="#">Convertible</span>
+        </div>
+        <div class="col  ">
+          <img src="../../media/img/miniaturas/Doble Cabina.png" alt=""><br>
+          <span class="center-align" href="#">Doble Cabina</span>
+        </div>
+        <div class="col  ">
+          <img src="../../media/img/miniaturas/Furgon.png" alt=""><br>
+          <span class="center-align" href="#">Furgón</span>
+        </div>
+        <div class="col ">
+          <img src="../../media/img/miniaturas/Hatchback.png" alt=""><br>
+          <span class="center-align" href="#">Hatchback</span>
+        </div>
+        <div class="col  ">
+          <img src="../../media/img/miniaturas/Coupé.png" alt=""><br>
+          <span class="center-align" href="#">Coupé</span>
+        </div>
+        <div class="col ">
+          <img src="../../media/img/miniaturas/Station Wagon.png" alt=""><br>
+          <span class="center-align" href="#">Station Wagon</span>
+        </div>
+      </div>
+    </section>
+  </article>
+
+
+  <!--Cuerpo del CRUD-->
+  
+  <article>
+    <section class="container">
+        
+      
+        {% block main %}
+
+        {% endblock main %}
+    
+
+    </section>
+</article>
+
+
+
+<!--
+
+  <section class="paddTop80">
+    <article>
+      <div class="container">
+
+        <div class="row">
+          <div>
+            <form id="vehiculo-form">
+              <div class="input-field col s3 m4 l3" id="id-marca">
+                <select id="selectMarca">
+                  <option value="" disabled selected> Marca</option>
+                  <option value="Alfa Romeo">Alfa Romeo</option>
+                  <option value="Aston Martin">Aston Martin</option>
+                  <option value="Audi">Audi</option>
+                  <option value="Baic">Baic</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Brilliance">Brilliance</option>
+                  <option value="Changan">Changan</option>
+                  <option value="Chery">Chery</option>
+                  <option value="Chevrolet">Chevrolet</option>
+                  <option value="Citroen">Citroen</option>
+                  <option value="Citroën">Citroën</option>
+                  <option value="Dfm">Dfm</option>
+                  <option value="Dfsk">Dfsk</option>
+                  <option value="Dodge">Dodge</option>
+                  <option value="Dongfeng">Dongfeng</option>
+                  <option value="Ds">Ds</option>
+                  <option value="Faw">Faw</option>
+                  <option value="Ferrari">Ferrari</option>
+                  <option value="Fiat">Fiat</option>
+                  <option value="Ford">Ford</option>
+                  <option value="Foton">Foton</option>
+                  <option value="Geely">Geely</option>
+                  <option value="Great Wall">Great Wall</option>
+                  <option value="Haval">Haval</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Hyundai">Hyundai</option>
+                  <option value="INFINITI">INFINITI</option>
+                  <option value="Jac">Jac</option>
+                  <option value="Jaguar">Jaguar</option>
+                  <option value="Jeep">Jeep</option>
+                  <option value="Jmc">Jmc</option>
+                  <option value="Kia">Kia</option>
+                  <option value="Lada">Lada</option>
+                  <option value="Land Rover">Land Rover</option>
+                  <option value="Lexus">Lexus</option>
+                  <option value="Lifan">Lifan</option>
+                  <option value="Mahindra">Mahindra</option>
+                  <option value="Maserati">Maserati</option>
+                  <option value="Maxus">Maxus</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mercedes-Benz">Mercedes-Benz</option>
+                  <option value="MG">MG</option>
+                  <option value="MINI">MINI</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="Nissan">Nissan</option>
+                  <option value="Opel">Opel</option>
+                  <option value="Peugeot">Peugeot</option>
+                  <option value="Porsche">Porsche</option>
+                  <option value="Ram">Ram</option>
+                  <option value="Renault">Renault</option>
+                  <option value="Seat">Seat</option>
+                  <option value="SKODA">SKODA</option>
+                  <option value="SsangYong">SsangYong</option>
+                  <option value="Subaru">Subaru</option>
+                  <option value="Suzuki">Suzuki</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Volkswagen">Volkswagen</option>
+                  <option value="Volvo">Volvo</option>
+                  <option value="Zxauto">Zxauto</option>
+                </select>
+                <label>Marca</label>
+              </div>
+
+              <div class="input-field col s3 m4 l2">
+                <input type="text" class="id-modelo" id="id-modelo">
+                <label for="last_name">Modelo</label>
+              </div>
+              <div class="input-field col s3 m2 l2">
+                <input type="number" class="id-anio">
+                <label for="last_name">Año</label>
+              </div>
+              <div class="input-field col s3 m2 l2">
+                <input type="number" class="id-precio">
+                <label for="last_name">Precio</label>
+              </div>
+
+              <div class="input-field col s12 m6 l3">
+                <select id="selectedTV">
+                  <option value="" disabled selected>Tipo De Vehiculo</option>
+                  <option value="Sedán">Sedán</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Convertible">Convertible</option>
+                  <option value="Doble Cabina">Doble Cabina</option>
+                  <option value="Furgón">Furgón</option>
+                  <option value="Hatchback">Hatchback</option>
+                  <option value="Coupé">Coupé</option>
+                  <option value="Station Wagon">Station Wagon</option>
+                </select>
+                <label>Tipo Vehiculo</label>
+              </div>
+
+              <div class="input-field col s8 m4 l3">
+                <select id="selectedEV">
+                  <option value="" disabled selected>Estado Vehiculo</option>
+                  <option value="Nuevo">Nuevo</option>
+                  <option value="Usado">Usado</option>
+                  <option value="Prenda">Prenda</option>
+                  <option value="Chocado">Chocado</option>
+                </select>
+                <label>Estado Vehiculo</label>
+              </div>
+
+              <div class="input-field col s4 m2 l3">
+                <input type="number" class="id-nPuertas">
+                <label for="last_name">N° Puertas</label>
+              </div>
+
+
+              <div class="input-field col s12 m4 l2 center-align">
+                <a class="waves-effect waves-light btn green" onclick="Agregar();">Agregar</a>
+              </div>
+              <div class="input-field col s12 m4  l2 center-align">
+                <a class="waves-effect waves-light btn blue" onclick="Modificar();">Actualizar</a>
+              </div>
+              <div class="input-field col s12 m4  l2 center-align">
+                <a class="waves-effect waves-light btn red" onclick="Eliminar();">Eliminar</a>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      -->
+        <div class="row cardColor" id="contenidoAdd">
+
+          <!-- Aca van los Autos-->
+
+        </div>
+
+
+      </div>
+    </article>
+  </section>
+
+
+  <div class="bGcrema">
+    <div class="container">
+      
+      <div class="carousel" >
+        <a class="carousel-item" href="#one!"><img src="../../media/img/miniaturas/Sedán.png"></a>
+          <a class="carousel-item" href="#two!"><img src="../../media/img/miniaturas/Convertible.png"></a>
+          <a class="carousel-item" href="#three!"><img src="../../media/img/miniaturas/Coupé.png"></a>
+          <a class="carousel-item" href="#four!"><img src="../../media/img/miniaturas/Hatchback.png"></a>
+      </div>
+      
+
+
+
+      
+    </div>
+<br><br>
+  </div>
+  <div class="bGcrema">
+    <div class="container">
+      <div class="section">
+        <h3 class="center">Tal vez te pueda interesar esto</h3>
+
+        <div class="row" style="padding:40px;">
+          <div class="col s12 m4 " style="padding-bottom: 35px;">
+            <div class="icon-block gGWhiteradio" style="padding:20px;">
+              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/mano_billete.png" alt=""></h2>
+              <h5 class="center">Oferta Instantánea</h5>
+              <p class="light center-align">¿Necesitas vender tu auto rápido? Obtén el pago en sólo una hora.</p>
+              <span class="btn center" style="display: flex; justify-content: center;">Comenzar</span>
+            </div>
+          </div>
+          <div class="col s12 m4 " style="padding-bottom: 35px;">
+            <div class="icon-block gGWhiteradio" style="padding:20px;">
+              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/globo_car.png" alt=""></h2>
+              <h5 class="center">Punto Seguro</h5>
+              <p class="light center-align">Punto Seguro de Chileautos es un lugar confiable para reunirse con el
+                comprador.
+              </p>
+              <span class="btn center-align" style="display: flex; justify-content: center;">Comenzar</span>
+            </div>
+          </div>
+
+          <div class="col s12 m4 " style="padding-bottom: 35px;">
+            <div class="icon-block gGWhiteradio" style="padding:20px;">
+              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/profile.png" alt="" ></h2>
+              <h5 class="center">Publica como automotora</h5>
+              <p class="light center-align">Publica tus vehículos por un valor fijo mensual.
+              </p>
+              <br>
+              <span class="btn center-align" style="display: flex; justify-content: center;">Conoce más</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+  <footer class="page-footer white">
+    <div class="container">
+      <div class="row center" id="footerrr">
+        <div class="col l2 m4 s6">
+          <h5 class="black-text">Tipo</h5>
+          <ul class="black-text">
+
+            <li><a href="#!"></a>Autos</a></li>
+            <li><a href="#!"></a>Camionetas</a></li>
+            <li><a href="#!"></a>Todo Terrenos</a></li>
+            <li><a href="#!"></a>Motos</a></li>
+            <li><a href="#!"></a>Camiones</a></li>
+            <li><a href="#!"></a>Furgones</a></li>
+            <li><a href="#!"></a>Buses</a></li>
+            <li><a href="#!"></a>Vans</a></li>
+
+          </ul>
+        </div>
+        <div class="col l2 m4 s6">
+          <h5 class="black-text">Marcas</h5>
+          <ul class="black-text">
+            <li><a href="#!"></a>Chevrolet</a></li>
+            <li><a href="#!"></a>Hyundai</a></li>
+            <li><a href="#!"></a>Toyota</a></li>
+            <li><a href="#!"></a>Nissan</a></li>
+            <li><a href="#!"></a>Suzuki</a></li>
+            <li><a href="#!"></a>Kia</a></li>
+            <li><a href="#!"></a>Peugeot</a></li>
+            <li><a href="#!"></a>Ford</a></li>
+          </ul>
+        </div>
+
+        <div class="col l2 m4 s6">
+          <h5 class="black-text">Estado</h5>
+          <ul class="black-text">
+            <li><a href="#!"></a>Nuevos</a></li>
+            <li><a href="#!"></a>Usados</a></li>
+
+          </ul>
+        </div>
+
+
+
+        <div class="col l2  m4 s6">
+          <h5 class="black-text">Ciudad</h5>
+          <ul class="black-text">
+            <li><a href="#!"></a>Santiago</a></li>
+            <li><a href="#!"></a>Concepción</a></li>
+            <li><a href="#!"></a>Temuco</a></li>
+            <li><a href="#!"></a>Viña del Mar</a></li>
+            <li><a href="#!"></a>Rancagua</a></li>
+            <li><a href="#!"></a>Talca</a></li>
+            <li><a href="#!"></a>Puerto Montt</a></li>
+            <li><a href="#!"></a>Curicó</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col l2  m4 s6">
+          <h5 class="black-text">Sitios</h5>
+          <ul class="black-text">
+            <li><a href="#!"></a>carsales.com.au</a></li>
+            <li><a href="#!"></a>demotores.com.ar</a></li>
+            <li><a href="#!"></a>soloautos.mx</a></li>
+            <li><a href="#!"></a>webmotors.com.br</a></li>
+            <li><a href="#!"></a>autologia.com.mx</a></li>
+            <li><a href="#!"></a>autologia.cl</a></li>
+            <li><a href="#!"></a>motoring.com.au</a></li>
+            <li><a href="#!"></a>wm1.com.br</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="col l2 m4 s6">
+          <h5 class="black-text">Ayuda General</h5>
+          <ul class="black-text">
+            <li><a href="#!"></a>Términos y condiciones</a></li>
+            <li><a href="#!"></a>Privacidad</a></li>
+            <li><a href="#!"></a>Contáctanos</a></li>
+            <li><a href="#!"></a>Mapa del sitio</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright blue">
+      <div class="container">
+        <div class="col s6 left">
+          <img src="https://resource.csnstatic.com/retail/globals/logo/v5/chileautos-white.svg"
+            style="max-width: 100px; max-height: 32px;" alt=""><a style="color: white; padding-left: 35px;">Realizado
+            Por</a><span style="padding-left: 15px;">Los Brocas</span>
+        </div>
+        <div class="col s6 right ">
+          <span style="font-size: 28px; color: white; padding-right: 10px;">
+            <i class="fab fa-facebook-square"></i>
+          </span>
+
+          <span style="font-size: 28px; color: white; padding-right: 10px;">
+            <i class="fab fa-twitter-square"></i>
+          </span>
+
+          <span style="font-size: 28px; color: white; padding-right: 10px;">
+            <i class="fab fa-youtube-square"><a style="font-size: 24px; color: white; padding-left: 5px;">Youtube</a></i>
+          </span>
+
+          <span style="font-size: 28px; color: white;">
+            <i class="fab fa-instagram-square"></i>
+          </span>
+
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!--  Scripts-->
+  
+
+<script src="https://kit.fontawesome.com/2b53710f8c.js" crossorigin="anonymous"></script>
+  <script src="../../media/js/js.js"></script>
+  <script src="../../media/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../media/js/materialize.js"></script>
+  <script src="../../media/js/init.js"></script>
+  
+  
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{% extends "base/index.html "%}
+
+{% block main %}
+
+
+{% if user.is_authenticated %}
+        <h2 class="center-align">Bienvenido {{ user.username }}</h2>
+        
+
+
+
+{% else %}
+
+<br>
+<br>
+<br>
+<h3 class="center-align">Inicio De Sesion</h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for campo in formulario %}
+        <div class="form-group">
+            <label for="campo.id_for_label">{{ campo.label }}</label>
+            {{campo}}
+        </div>
+    {% endfor %}
+    <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
+</form>   
+ <a class="btn blue" href="{% url 'reset_password' %}">Olvidé contraseña</a>
+ 
+
+<br>
+<br>
+<br>
+
+      
+{% endif %}
+
+{% endblock main %}

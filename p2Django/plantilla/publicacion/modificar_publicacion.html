@@ -1,0 +1,10 @@
+{% extends "base/index.html" %}
+
+{% block main %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <input type="submit" class="btn blue" value="Actualizar">
+</form>
+<a class="btn green" href="/inicio/">Volver</a>
+{% endblock main %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Chile Autos, Cotiza Tu Nuevo Vehiculo</title>
+  <!-- CSS  -->
+  {% include "base/head.html" %}
+  {% block head %}
+  {% endblock head %}
+  
+</head>
+
+<body>
+
+  <header>
+
+    {% include "base/navbar.html" %}
+    {% block navbar %}
+    {% endblock navbar %}
+  </header>
+
+
+  {% include "base/banner.html" %}
+  {% block banner %}
+  {% endblock banner %}
+
+
+  <br>
+
+  <main class="container">
+    {% block main %}
+
+    {% endblock main %}
+  </main>
+
+
+
+  <!--Footer -->
+  {% include "base/footer.html" %}
+  {% block footer %}
+  {% endblock footer %}
+
+
+
+
+
+
+
+  <!-- Compiled and minified JavaScript -->
+  <!-- TODO: ACA ACTUALICE LOS JS NOSE SI QUEDO BIEN   -->
+
+  {% include "base/scripts.html" %}
+  {% block scripts %}
+  {% endblock scripts %}
+
+
+</body>
+
+</html>

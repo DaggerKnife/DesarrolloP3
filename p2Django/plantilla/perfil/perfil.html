@@ -1,0 +1,52 @@
+{% extends 'base/index.html' %}
+<br>
+<br>
+<br>
+{% block main %}
+<section class="row cardColor">
+
+    {% if publicaciones %}
+    {% for publicacion in publicaciones %}
+
+
+    <article class="col s6 m4 l3">    
+            <div class="card ">
+                <div class="card-image waves-effect waves-block waves-light ">
+                    <img class="activator maxminimg" style="min-width: 297px;
+                    min-height: 250.5px;" src="/media/{{ publicacion.imagen}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{publicacion.marca}}
+                        {{publicacion.modelo}}<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">LinL_A_Programar</a></p>
+                </div>
+                <div class="card-reveal ">
+                    <span class="card-title grey-text text-darken-4">Especificaciones<i
+                            class="material-icons right">close</i></span>
+                    <p>Marca: {{publicacion.marca}}</p>
+                    <p>Modelo: {{publicacion.modelo}}</p>
+                    <p>Tipo de Vehiculo: {{publicacion.tipoVehiculo}}</p>
+                    <p>Combustible: {{publicacion.combustible}}</p>
+                    <p>Transmision: {{publicacion.transmision}}</p>
+                    <p>Precio: ${{publicacion.precio}}</p>
+                    <p>Estado: {{publicacion.uso}}</p>
+                    <p>Fecha Publicacion: {{publicacion.fechaSubida}}</p>
+
+                    <br>
+                    <a class="btn blue" href="/publicaciones/editar/{{ publicacion.id }}">editar</a>
+                    <a class="btn red" href="/publicaciones/eliminar/{{ publicacion.id }}">Eliminar</a>
+                    <br><br>
+                </div>
+            </div>     
+    </article>
+
+
+    
+    {% endfor %}
+    {% endif  %}
+</section>
+{% endblock main %}
+
+<br>
+<br>
+<br>

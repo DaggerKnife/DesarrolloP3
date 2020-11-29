@@ -1,0 +1,40 @@
+{% extends "base/index.html" %}
+{% block main %}
+{% if formulario1.errors or formulario2.errors %}
+{{ formulario1.errors }}
+{{ formulario2.errors }}
+{% endif %}
+
+<br>
+<br>
+<br>
+<h3 class="center-align">Formulario De Registro</h3>
+<form action="/crearUsuario/" method="post">
+    {% csrf_token %}
+    <section class="row">
+        <article class="col s12">
+            {% for campo in formulario1 %}
+            <div class="form-group">
+                <label for="campo.is_for_label">{{ campo.label }}</label>
+                {{ campo }}
+            </div>
+            {% endfor %}
+        </article>
+    </section>
+    <!-- {{ formulario1 }} -->
+    <section class="row">
+        <article class="col s12">
+            {{ formulario2 }}
+        </article>
+    </section>
+    
+
+    <div class="row center-align">
+        <input type="submit" class="btn btn-info btn-block center-align" value="Registrar">
+    </div>
+</form>
+{% endblock main %}
+
+<br>
+<br>
+<br>

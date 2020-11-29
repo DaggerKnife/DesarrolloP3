@@ -1,0 +1,34 @@
+{% extends "base/index.html" %}
+
+{% block main %}
+    <h1>Listar productos....</h1>
+    <a href="/vehiculos/agregar/">Agregar nuevo producto....</a>
+    {% if productos %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehiculo in vehiculos %}
+                <tr>
+                    <td>{{ vehiculo.id }}</td>
+                    <td>{{ vehiculo.nombre }}</td>
+                   
+                    <td>
+                        <a href="/vehiculos/editar/{{ vehiculos.id }}">editar</a>
+                        <a href="/vehiculos/eliminar/{{ vehiculos.id }}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+    {% else %}
+        <p>No hay Vehiculos....</p>
+    {% endif %}
+{% endblock main %}
